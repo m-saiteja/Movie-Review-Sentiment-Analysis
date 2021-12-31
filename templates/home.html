@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+  body{
+      text-align: center;
+      background-color: darkgrey;
+  }
+  label{
+      font-size: 15px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  textarea{
+      width: 600px;
+      height: 150px;
+  } 
+  .jumbotron{
+      height: 400px;
+  }
+  button{
+      background-color: gray;
+      border-radius: 25%;
+      color: black;
+      font-weight: bold;
+  }
+</style>
+
+<div class="jumbotron">
+    <h1>Movie Review System</h1>
+    <br>
+    <form action="/result" method="post">
+        <label><strong>Enter Your Movie Review Below:</strong></label>
+        <br>
+        <textarea name="review" rows="50" placeholder="Enter your review here"></textarea>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

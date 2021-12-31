@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+  body{
+      text-align: center;
+      background-color: darkgrey;
+  }
+  button{
+      background-color: gray;
+      border-radius: 25%;
+      color: black;
+      font-weight: bold;
+  }
+</style>
+
+<div class="jumbotron">
+    <form action="/" method="POST">
+        <p>Prediction for your Review is: <strong>{{data["pred"]}}</strong></p>
+        <br>
+        <textarea name="old_data" style="display:none;">{{data}}</textarea>
+        <br>
+        <label>Is the Prediction correct?</label>
+        <br>
+        <input type="radio" name="correct" value="CORRECT">
+        <label>Correct</label>
+        <br>
+        <input type="radio" name="wrong" value="WRONG">
+        <label >Wrong</label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+  
+{% endblock %}
